@@ -202,9 +202,9 @@ Distributed under the [BSD-2-Clause](https://opensource.org/licenses/BSD-2-Claus
 ## Contact
 
 ### Members
-* Victor Connes - <Victor.Connes@univ-nantes.fr>
-* Colin de la Higuera - <cdlh@univ-nantes.fr>
+* Victor Connes - <victor.connes@gmail.com>
 * Walid Ben Romdhane - [@walidbrw](https://github.com/walidbrw) - <walid_benromdhane@hotmail.fr>
+* Colin de la Higuera - <cdlh@univ-nantes.fr>
 
 
 ### More updates are on going !
