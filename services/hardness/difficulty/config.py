@@ -1,0 +1,8 @@
+from .charpersecres.service import ns_difficulty as ns_charpersecres
+from .charpersectext.service import ns_difficulty as ns_charpersectext
+from .tfidf2technicityres.service import ns_difficulty as ns_tfidf2technicityres
+from .tfidf2technicitytext.service import ns_difficulty as ns_tfidf2technicitytext
+from .wikification2conpersecres.service import ns_difficulty as ns_wikification2conpersecres
+from .wikification2conpersectext.service import ns_difficulty as ns_wikification2conpersectext
+
+namespaces = [ns_charpersecres, ns_charpersectext, ns_tfidf2technicityres, ns_tfidf2technicitytext, ns_wikification2conpersecres, ns_wikification2conpersectext]

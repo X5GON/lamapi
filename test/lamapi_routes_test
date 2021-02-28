@@ -1,0 +1,31 @@
+Test Http requests for LAM api:
+
+**Continuousdoc2vec:
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://localhost:5000/temporal/continuousdoc2vec/fetch -d '{"resource_ids": ['39435', '39426', '39425', '38657']}'
+
+**Continuouswikifier2order:
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://localhost:5000/ordonize/continuouswikification2order/reordonize -d '{"resource_id": '39420', "candidates": ['39435', '39426', '39425', '38657']}'
+
+**Continuouswikifier:
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://localhost:5000/temporal/continuouswikifier/fetch -d '{"resource_ids": ['39435', '39426', '39425', '38657'],  "wikification_type": 'SIMPLE'}'
+
+**difficulty:
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://localhost:5000/difficulty/conpersec/res -d '{"resource_ids": ['39435', '39426', '39425', '38657']}'
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://localhost:5000/difficulty/tfidf2technicity/res -d '{"resource_ids": ['39435', '39426', '39425', '38657']}'
+
+**doc2vec:
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://localhost:5000/distance/doc2vec/fetch -d '{"resource_ids": ['39435', '39426', '39425', '38657']}'
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://localhost:5000/distance/doc2vec/knn/res -d '{"resource_id": '39435'}'
+
+
+**predict_missing_deponcandidatetype:
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://localhost:5000/missingresource/missingresources/predictmissing -d '{"previous": '39435', "after": '7', "candidate_ids": ['39435', '9', '7', '7']}'
+
+
+**tfidf:
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://localhost:5000/distance/text2tfidf/fetch -d '{"resource_ids": ['39435', '39426', '39425', '38657'], "tfidf_type": 'SIMPLE'}'
+
+
+**wikifierModel routes:
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://localhost:5000/distance/wikifier/fetch -d '{"resource_ids": ['39435', '39426', '39425', '38657'], "wikification_type": 'SIMPLE'}'
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://127.0.0.1:5000/distance/wikifier/text -d '{"resource_texts": ['Your text1 here...'', 'Your text2 here...''], "wikification_type": 'SIMPLE'}'

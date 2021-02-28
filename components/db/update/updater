@@ -1,0 +1,33 @@
+**************************************Lam API models update commands (terminal)******************************************************************
+
+text2tfidf:
+----------
+Update:		       python3 -c "from services.distance.text2tfidf.update.core import tfidf_model_update_DB; tfidf_model_update_DB()"
+CreateKnnModel:	 python3 -c "from services.distance.text2tfidf.update.core import tfidf_create_knn_model; tfidf_create_knn_model()"
+
+
+Doc2vec:
+------------
+CreateModel:	   python3 -c "from services.distance.doc2vec.update.core import doc2vec_createmodel; doc2vec_createmodel()"
+Update DB:	     python3 -c "from services.distance.doc2vec.update.core import doc2vec_model_update_DB; doc2vec_model_update_DB(resume=False)"
+CreateKnnModel:	 python3 -c "from services.distance.doc2vec.update.core import doc2vec_create_knn_model; doc2vec_create_knn_model()"
+
+
+ContinuousDoc2vecModel:
+------------
+CreateModel: 	   python3 -c "from services.temporal.continuousdoc2vec.update.core import continuous_doc2vec_createmodel; continuous_doc2vec_createmodel()"
+Update DB:	     python3 -c "from services.temporal.continuousdoc2vec.update.core import continuous_doc2vec_model_update_DB; continuous_doc2vec_model_update_DB(resume=False)"
+
+
+WikifierModel:
+-------------
+Update DB: 	     python3 -c "from services.distance.wikifier.update.core import wikifier_model_update_DB; wikifier_model_update_DB(resume=False)"
+CreateKnnModel:	 python3 -c "from services.distance.wikifier.update.core import wikifier_create_knn_model; wikifier_create_knn_model()"
+
+
+ContinuousWikifierModel:
+-------------
+Update DB:	     python3 -c "from services.temporal.continuouswikifier.update.core import continuouswikifier_model_update_DB; continuouswikifier_model_update_DB(resume=False, batch_size=500)"
+
+
+********************************************* Enjoy :) ******************************************************************************************
